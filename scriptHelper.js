@@ -71,12 +71,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         document.getElementById("fuelStatus").innerHTML = `Fuel level high enough for launch`;
         document.getElementById("cargoStatus").innerHTML = `Cargo mass low enough for launch`;
     };
-   
 }
+
+
 
 async function myFetch() {
     let planetsReturned;
-
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
         return response.json();
         });
@@ -85,7 +85,7 @@ async function myFetch() {
 }
 
 function pickPlanet(planets) {
-    let choice = Math.floor(Math.random() *planets.length);
+    let choice = Math.floor(Math.random()*planets.length);
     return planets[choice];
 }
 
